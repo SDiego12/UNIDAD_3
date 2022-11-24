@@ -22,7 +22,7 @@ public class Ventana3 extends JFrame {
     
     private List <JPanel> jPanelList;
     public Ventana3() throws HeadlessException{
-    this.setTitle("Grid Layout");
+    this.setTitle("FlowLayout");
     this.setSize(800, 100);
     this.setLocation(350, 500);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
