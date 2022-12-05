@@ -10,6 +10,6 @@ package Ventana_0201;
  */
 public class Principal {
     public static void main(String[] args) {
-        var ventana0201 = new Ventana0201();
+        var Ventana0201 = new Ventana0201();
     }
 }
