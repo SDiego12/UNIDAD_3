@@ -22,7 +22,7 @@ import javax.swing.border.BevelBorder;
  *
  * @author usuario
  */
-public class Ventana0201 extends JFrame {
+public final class Ventana0201 extends JFrame {
 
     private List<JPanel> jPanelList;
     private List<JButton> jButtonList;
@@ -31,7 +31,7 @@ public class Ventana0201 extends JFrame {
     private List<JComboBox> jComboBox;
 
     public Ventana0201() throws HeadlessException {
-        this.setTitle(" ");
+        this.setTitle("Informacion");
         this.setSize(500, 300);
         this.setLocation(200, 100);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -57,29 +57,34 @@ public class Ventana0201 extends JFrame {
         this.jPanelList.add(new JPanel());
         this.jPanelList.add(new JPanel());
         this.jPanelList.add(new JPanel());
-
-        this.jPanelList.get(5).setBackground(Color.WHITE);
+        
+        this.jPanelList.get(1).setBackground(Color.WHITE);
         this.jPanelList.get(2).setBackground(Color.WHITE);
         this.jPanelList.get(3).setBackground(Color.WHITE);
         this.jPanelList.get(4).setBackground(Color.WHITE);
+        this.jPanelList.get(5).setBackground(Color.WHITE);
         this.jPanelList.get(6).setBackground(Color.WHITE);
         this.jPanelList.get(7).setBackground(Color.WHITE);
         this.jPanelList.get(8).setBackground(Color.WHITE);
-         this.jPanelList.get(9).setBackground(Color.WHITE);
-      
-             this.jPanelList.get(13).setBackground(Color.WHITE);
-        this.jPanelList.get(1).setBackground(new Color(32, 167, 218));
+ 
+         
+     
+        this.jPanelList.get(0).setBackground(new Color(32, 167, 218));
 
-        this.jPanelList.get(1).setBorder(new BevelBorder(BevelBorder.RAISED));
+        this.jPanelList.get(0).setBorder(new BevelBorder(BevelBorder.RAISED));
 
-        this.jPanelList.get(0).setLayout(new GridLayout(8, 1));
+        this.jPanelList.get(0).setLayout(new GridLayout(9, 1));
+        this.jPanelList.get(0).add(this.jPanelList.get(0));
         this.jPanelList.get(0).add(this.jPanelList.get(1));
         this.jPanelList.get(0).add(this.jPanelList.get(2));
         this.jPanelList.get(0).add(this.jPanelList.get(3));
         this.jPanelList.get(0).add(this.jPanelList.get(4));
+        this.jPanelList.get(0).add(this.jPanelList.get(5));
         this.jPanelList.get(0).add(this.jPanelList.get(6));
         this.jPanelList.get(0).add(this.jPanelList.get(7));
         this.jPanelList.get(0).add(this.jPanelList.get(8));
+
+
 
     }
 
@@ -137,35 +142,35 @@ public class Ventana0201 extends JFrame {
         carreras[2] = "Ingenieria Electrica";
         carreras[3] = "Veterinaria";
         this.jComboBox.add(new JComboBox(carreras));
+        
         var modalidad = new String[3];
         modalidad[0] = "Presencial";
         modalidad[1] = "Online";
-        modalidad[3] = "Semi-Presencial";
+        modalidad[2] = "Semi-Presencial";
         this.jComboBox.add(new JComboBox(modalidad));
 
-        this.jComboBox = new ArrayList<>();
         var sedes = new String[3];
         sedes[0] = "MATRIZ CUENCA";
         sedes[1] = "QUITO";
         sedes[2] = "GUAYAQUIL";
         this.jComboBox.add(new JComboBox(sedes));
+        
         var campus = new String[2];
         campus[0] = "El vecino";
         campus[1] = "El concecionario";
         this.jComboBox.add(new JComboBox(campus));
 
-        this.jComboBox = new ArrayList<>();
         var jornada = new String[3];
         sedes[0] = "Matutina";
         sedes[1] = "Vespertina";
         sedes[2] = "Nocturna";
         this.jComboBox.add(new JComboBox(jornada));
 
-    this.jPanelList.get(2).add(this.jComboBox.get(1));
-    this.jPanelList.get(3).add(this.jComboBox.get(2));
-    this.jPanelList.get(4).add(this.jComboBox.get(3));
-    this.jPanelList.get(5).add(this.jComboBox.get(4));
-    this.jPanelList.get(6).add(this.jComboBox.get(5));
+    this.jPanelList.get(2).add(this.jComboBox.get(0));
+    this.jPanelList.get(3).add(this.jComboBox.get(1));
+    this.jPanelList.get(4).add(this.jComboBox.get(2));
+    this.jPanelList.get(5).add(this.jComboBox.get(3));
+    this.jPanelList.get(6).add(this.jComboBox.get(4));
    
     
     
@@ -174,7 +179,7 @@ public class Ventana0201 extends JFrame {
     public void iniciarJTextfile() {
         this.jTextFile = new ArrayList<>();
         this.jTextFile.add(new JTextField(15));
-        this.jPanelList.get(0).add(this.jTextFile.get(0));
+        this.jPanelList.get(1).add(this.jTextFile.get(0));
         this.jPanelList.get(7).add(this.jTextFile.get(0));
 
     }
